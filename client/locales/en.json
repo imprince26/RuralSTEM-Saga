@@ -1,0 +1,204 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success!",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "language": "Language",
+    "theme": "Theme",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign Up",
+    "welcome": "Welcome"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "courses": "Courses",
+    "games": "Games",
+    "leaderboard": "Leaderboard",
+    "progress": "Progress",
+    "achievements": "Achievements",
+    "about": "About",
+    "contact": "Contact",
+    "help": "Help"
+  },
+  "auth": {
+    "loginTitle": "Login to RuralSTEM Saga",
+    "signupTitle": "Join RuralSTEM Saga",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "role": "Select Role",
+    "student": "Student",
+    "teacher": "Teacher",
+    "admin": "Administrator",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signupLink": "Sign up here",
+    "loginLink": "Login here",
+    "demoLogin": "Try Demo",
+    "demoStudent": "Demo Student",
+    "demoTeacher": "Demo Teacher",
+    "demoAdmin": "Demo Admin"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Gamified Learning for Rural Education",
+      "subtitle": "Empowering rural students with interactive STEM education through engaging games and personalized learning paths",
+      "cta": "Start Learning Journey",
+      "demoVideo": "Watch Demo"
+    },
+    "features": {
+      "title": "Why Choose RuralSTEM Saga?",
+      "subtitle": "Designed specifically for rural education challenges",
+      "interactive": {
+        "title": "Interactive Games",
+        "description": "Learn through fun, engaging games that make STEM concepts easy to understand"
+      },
+      "multilingual": {
+        "title": "Multilingual Support",
+        "description": "Available in English, Hindi, and Odia to support local languages"
+      },
+      "offline": {
+        "title": "Offline Access",
+        "description": "Download content for learning without internet connectivity"
+      },
+      "adaptive": {
+        "title": "Adaptive Learning",
+        "description": "Personalized learning paths that adapt to each student's pace"
+      },
+      "analytics": {
+        "title": "Progress Tracking",
+        "description": "Comprehensive analytics for students, teachers, and parents"
+      },
+      "gamification": {
+        "title": "Gamification",
+        "description": "Earn points, badges, and compete with friends to stay motivated"
+      }
+    },
+    "stats": {
+      "students": "Students Engaged",
+      "schools": "Schools Connected",
+      "games": "Interactive Games",
+      "languages": "Languages Supported"
+    },
+    "subjects": {
+      "title": "STEM Subjects",
+      "subtitle": "Comprehensive coverage of Science, Technology, Engineering, and Mathematics",
+      "mathematics": "Mathematics",
+      "science": "Science",
+      "technology": "Technology",
+      "engineering": "Engineering"
+    },
+    "government": {
+      "title": "Government Initiative",
+      "subtitle": "Supporting national education goals and rural development",
+      "description": "Part of the Smart India Hackathon initiative to bridge the digital divide in rural education"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "overview": "Overview",
+    "recentActivity": "Recent Activity",
+    "quickActions": "Quick Actions",
+    "startLearning": "Start Learning",
+    "viewProgress": "View Progress",
+    "playGames": "Play Games",
+    "achievements": "Achievements",
+    "streak": "Learning Streak",
+    "points": "Total Points",
+    "level": "Current Level",
+    "badges": "Badges Earned"
+  },
+  "games": {
+    "title": "Learning Games",
+    "subtitle": "Learn STEM concepts through interactive games",
+    "play": "Play Now",
+    "difficulty": "Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "score": "Score",
+    "highScore": "High Score",
+    "timeSpent": "Time Spent",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "locked": "Locked"
+  },
+  "subjects": {
+    "mathematics": {
+      "title": "Mathematics",
+      "description": "Master mathematical concepts through interactive problem-solving games",
+      "topics": {
+        "arithmetic": "Arithmetic",
+        "algebra": "Algebra",
+        "geometry": "Geometry",
+        "statistics": "Statistics"
+      }
+    },
+    "science": {
+      "title": "Science",
+      "description": "Explore scientific phenomena through virtual experiments and simulations",
+      "topics": {
+        "physics": "Physics",
+        "chemistry": "Chemistry",
+        "biology": "Biology",
+        "earthScience": "Earth Science"
+      }
+    },
+    "technology": {
+      "title": "Technology",
+      "description": "Learn digital literacy and computer science fundamentals",
+      "topics": {
+        "digitalLiteracy": "Digital Literacy",
+        "programming": "Programming Basics",
+        "internetSafety": "Internet Safety",
+        "productivity": "Digital Tools"
+      }
+    },
+    "engineering": {
+      "title": "Engineering",
+      "description": "Understand engineering principles through design challenges",
+      "topics": {
+        "mechanicalEngineering": "Mechanical Engineering",
+        "civilEngineering": "Civil Engineering",
+        "electricalEngineering": "Electrical Engineering",
+        "environmentalEngineering": "Environmental Engineering"
+      }
+    }
+  },
+  "teacher": {
+    "dashboard": "Teacher Dashboard",
+    "students": "My Students",
+    "assignments": "Assignments",
+    "grades": "Grades",
+    "analytics": "Analytics",
+    "createAssignment": "Create Assignment",
+    "viewReports": "View Reports",
+    "classManagement": "Class Management"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "users": "User Management",
+    "content": "Content Management",
+    "analytics": "Platform Analytics",
+    "settings": "System Settings",
+    "reports": "Reports"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "कुछ गलत हो गया",
+    "success": "सफल!",
+    "save": "सेव करें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "view": "देखें",
+    "back": "वापस",
+    "next": "आगे",
+    "previous": "पिछला",
+    "search": "खोजें",
+    "filter": "फिल्टर",
+    "sort": "सॉर्ट करें",
+    "language": "भाषा",
+    "theme": "थीम",
+    "profile": "प्रोफाइल",
+    "settings": "सेटिंग्स",
+    "logout": "लॉग आउट",
+    "login": "लॉग इन",
+    "signup": "साइन अप",
+    "welcome": "स्वागत है"
+  },
+  "navigation": {
+    "home": "होम",
+    "dashboard": "डैशबोर्ड",
+    "courses": "कोर्स",
+    "games": "गेम्स",
+    "leaderboard": "लीडरबोर्ड",
+    "progress": "प्रगति",
+    "achievements": "उपलब्धियाँ",
+    "about": "हमारे बारे में",
+    "contact": "संपर्क",
+    "help": "सहायता"
+  },
+  "auth": {
+    "loginTitle": "RuralSTEM Saga में लॉग इन करें",
+    "signupTitle": "RuralSTEM Saga में शामिल हों",
+    "email": "ईमेल पता",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "fullName": "पूरा नाम",
+    "role": "भूमिका चुनें",
+    "student": "छात्र",
+    "teacher": "शिक्षक",
+    "admin": "प्रशासक",
+    "rememberMe": "मुझे याद रखें",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "noAccount": "खाता नहीं है?",
+    "hasAccount": "पहले से खाता है?",
+    "signupLink": "यहां साइन अप करें",
+    "loginLink": "यहां लॉग इन करें",
+    "demoLogin": "डेमो करें",
+    "demoStudent": "डेमो छात्र",
+    "demoTeacher": "डेमो शिक्षक",
+    "demoAdmin": "डेमो प्रशासक"
+  },
+  "homepage": {
+    "hero": {
+      "title": "ग्रामीण शिक्षा के लिए गेमीफाइड लर्निंग",
+      "subtitle": "इंटरैक्टिव STEM शिक्षा के माध्यम से ग्रामीण छात्रों को सशक्त बनाना",
+      "cta": "सीखने की यात्रा शुरू करें",
+      "demoVideo": "डेमो देखें"
+    },
+    "features": {
+      "title": "RuralSTEM Saga क्यों चुनें?",
+      "subtitle": "विशेष रूप से ग्रामीण शिक्षा की चुनौतियों के लिए डिज़ाइन किया गया",
+      "interactive": {
+        "title": "इंटरैक्टिव गेम्स",
+        "description": "मजेदार, आकर्षक गेम्स के माध्यम से सीखें जो STEM अवधारणाओं को समझना आसान बनाते हैं"
+      },
+      "multilingual": {
+        "title": "बहुभाषी समर्थन",
+        "description": "स्थानीय भाषाओं का समर्थन करने के लिए अंग्रेजी, हिंदी और उड़िया में उपलब्ध"
+      },
+      "offline": {
+        "title": "ऑफलाइन एक्सेस",
+        "description": "इंटरनेट कनेक्टिविटी के बिना सीखने के लिए कंटेंट डाउनलोड करें"
+      },
+      "adaptive": {
+        "title": "अनुकूली शिक्षा",
+        "description": "व्यक्तिगत शिक्षा पथ जो प्रत्येक छात्र की गति के अनुकूल होते हैं"
+      },
+      "analytics": {
+        "title": "प्रगति ट्रैकिंग",
+        "description": "छात्रों, शिक्षकों और अभिभावकों के लिए व्यापक एनालिटिक्स"
+      },
+      "gamification": {
+        "title": "गेमीफिकेशन",
+        "description": "अंक अर्जित करें, बैज पाएं और प्रेरित रहने के लिए दोस्तों के साथ प्रतिस्पर्धा करें"
+      }
+    },
+    "stats": {
+      "students": "छात्र शामिल",
+      "schools": "स्कूल जुड़े",
+      "games": "इंटरैक्टिव गेम्स",
+      "languages": "भाषाएं समर्थित"
+    },
+    "subjects": {
+      "title": "STEM विषय",
+      "subtitle": "विज्ञान, प्रौद्योगिकी, इंजीनियरिंग और गणित का व्यापक कवरेज",
+      "mathematics": "गणित",
+      "science": "विज्ञान",
+      "technology": "प्रौद्योगिकी",
+      "engineering": "इंजीनियरिंग"
+    },
+    "government": {
+      "title": "सरकारी पहल",
+      "subtitle": "राष्ट्रीय शिक्षा लक्ष्यों और ग्रामीण विकास का समर्थन",
+      "description": "ग्रामीण शिक्षा में डिजिटल विभाजन को पाटने के लिए स्मार्ट इंडिया हैकाथॉन पहल का हिस्सा"
+    }
+  },
+  "dashboard": {
+    "welcome": "वापस स्वागत है",
+    "overview": "अवलोकन",
+    "recentActivity": "हाल की गतिविधि",
+    "quickActions": "त्वरित क्रियाएं",
+    "startLearning": "सीखना शुरू करें",
+    "viewProgress": "प्रगति देखें",
+    "playGames": "गेम्स खेलें",
+    "achievements": "उपलब्धियां",
+    "streak": "सीखने की श्रृंखला",
+    "points": "कुल अंक",
+    "level": "वर्तमान स्तर",
+    "badges": "अर्जित बैज"
+  },
+  "games": {
+    "title": "लर्निंग गेम्स",
+    "subtitle": "इंटरैक्टिव गेम्स के माध्यम से STEM अवधारणाएं सीखें",
+    "play": "अभी खेलें",
+    "difficulty": "कठिनाई",
+    "easy": "आसान",
+    "medium": "मध्यम",
+    "hard": "कठिन",
+    "score": "स्कोर",
+    "highScore": "उच्च स्कोर",
+    "timeSpent": "समय बिताया",
+    "completed": "पूर्ण",
+    "inProgress": "प्रगति में",
+    "locked": "लॉक्ड"
+  },
+  "subjects": {
+    "mathematics": {
+      "title": "गणित",
+      "description": "इंटरैक्टिव समस्या-समाधान गेम्स के माध्यम से गणितीय अवधारणाओं में महारत हासिल करें",
+      "topics": {
+        "arithmetic": "अंकगणित",
+        "algebra": "बीजगणित",
+        "geometry": "ज्यामिति",
+        "statistics": "सांख्यिकी"
+      }
+    },
+    "science": {
+      "title": "विज्ञान",
+      "description": "वर्चुअल प्रयोगों और सिमुलेशन के माध्यम से वैज्ञानिक घटनाओं का अन्वेषण करें",
+      "topics": {
+        "physics": "भौतिक विज्ञान",
+        "chemistry": "रसायन विज्ञान",
+        "biology": "जीव विज्ञान",
+        "earthScience": "पृथ्वी विज्ञान"
+      }
+    },
+    "technology": {
+      "title": "प्रौद्योगिकी",
+      "description": "डिजिटल साक्षरता और कंप्यूटर विज्ञान की बुनियादी बातें सीखें",
+      "topics": {
+        "digitalLiteracy": "डिजिटल साक्षरता",
+        "programming": "प्रोग्रामिंग की मूल बातें",
+        "internetSafety": "इंटरनेट सुरक्षा",
+        "productivity": "डिजिटल उपकरण"
+      }
+    },
+    "engineering": {
+      "title": "इंजीनियरिंग",
+      "description": "डिज़ाइन चुनौतियों के माध्यम से इंजीनियरिंग सिद्धांतों को समझें",
+      "topics": {
+        "mechanicalEngineering": "मैकेनिकल इंजीनियरिंग",
+        "civilEngineering": "सिविल इंजीनियरिंग",
+        "electricalEngineering": "इलेक्ट्रिकल इंजीनियरिंग",
+        "environmentalEngineering": "पर्यावरण इंजीनियरिंग"
+      }
+    }
+  },
+  "teacher": {
+    "dashboard": "शिक्षक डैशबोर्ड",
+    "students": "मेरे छात्र",
+    "assignments": "असाइनमेंट",
+    "grades": "ग्रेड",
+    "analytics": "एनालिटिक्स",
+    "createAssignment": "असाइनमेंट बनाएं",
+    "viewReports": "रिपोर्ट देखें",
+    "classManagement": "क्लास प्रबंधन"
+  },
+  "admin": {
+    "dashboard": "एडमिन डैशबोर्ड",
+    "users": "उपयोगकर्ता प्रबंधन",
+    "content": "कंटेंट प्रबंधन",
+    "analytics": "प्लेटफॉर्म एनालिटिक्स",
+    "settings": "सिस्टम सेटिंग्स",
+    "reports": "रिपोर्ट्स"
+  }
+}
