@@ -88,7 +88,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
-                Smart India Hackathon 2024 - Problem Statement 25048
+                Smart India Hackathon 2025 - Problem Statement 25048
               </Badge>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
@@ -117,18 +117,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 animate-float">
-          <div className="bg-accent/20 p-4 rounded-full">
-            <Award className="h-8 w-8 text-accent" />
-          </div>
-        </div>
-        <div className="absolute top-32 right-10 animate-float" style={{ animationDelay: '1s' }}>
-          <div className="bg-secondary/20 p-4 rounded-full">
-            <Trophy className="h-8 w-8 text-secondary" />
-          </div>
-        </div>
+      
       </section>
 
       {/* Stats Section */}
@@ -239,29 +228,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-muted py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-4">
-              <div className="bg-primary/10 p-2 rounded-full mr-3">
-                <Leaf className="h-6 w-6 text-primary" />
-              </div>
-              <span className="text-xl font-bold text-foreground">RuralSTEM Saga</span>
-            </div>
-            <p className="text-muted-foreground mb-4">
-              Empowering rural education through gamified STEM learning
-            </p>
-            <div className="flex justify-center space-x-6 text-sm text-muted-foreground">
-              <span>© 2024 RuralSTEM Saga</span>
-              <span>•</span>
-              <span>Smart India Hackathon 2024</span>
-              <span>•</span>
-              <span>Government of Odisha</span>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

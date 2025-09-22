@@ -200,5 +200,21 @@
     "analytics": "Platform Analytics",
     "settings": "System Settings",
     "reports": "Reports"
+  },
+   "header": {
+    "gamifiedLearning": "Gamified STEM Learning Platform for Rural Education",
+    "notifications": "Notifications",
+    "newAchievement": "New Achievement!",
+    "unlockedBadge": "You've unlocked a new badge!",
+    "gameCompleted": "Game Completed",
+    "numberQuestCompleted": "Number Quest completed successfully!",
+    "levelUp": "Level Up!",
+    "reachedLevel": "Congratulations! You've reached level {{level}}",
+    "points": "Points",
+    "level": "Level",
+    "streak": "Streak",
+    "profile": "Profile",
+    "settings": "Settings",
+    "searchPlaceholder": "Search games, topics, achievements..."
   }
 }

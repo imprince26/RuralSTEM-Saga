@@ -23,6 +23,22 @@
     "signup": "साइन अप",
     "welcome": "स्वागत है"
   },
+    "header": {
+    "gamifiedLearning": "ग्रामीण शिक्षा के लिए गेमिफाइड STEM लर्निंग प्लेटफॉर्म",
+    "notifications": "सूचनाएं",
+    "newAchievement": "नई उपलब्धि!",
+    "unlockedBadge": "आपने एक नया बैज अनलॉक किया है!",
+    "gameCompleted": "खेल पूरा हुआ",
+    "numberQuestCompleted": "नंबर क्वेस्ट सफलतापूर्वक पूरा हुआ!",
+    "levelUp": "स्तर बढ़ा!",
+    "reachedLevel": "बधाई हो! आप स्तर {{level}} पहुंच गए हैं",
+    "points": "अंक",
+    "level": "स्तर",
+    "streak": "लगातार",
+    "profile": "प्रोफ़ाइल",
+    "settings": "सेटिंग्स",
+    "searchPlaceholder": "खेल, विषय, उपलब्धियां खोजें..."
+  },
   "navigation": {
     "home": "होम",
     "dashboard": "डैशबोर्ड",

@@ -23,6 +23,22 @@
     "signup": "ସାଇନ୍ ଅପ୍",
     "welcome": "ସ୍ୱାଗତମ୍"
   },
+   "header": {
+    "gamifiedLearning": "ଗ୍ରାମାଞ୍ଚଳ ଶିକ୍ଷା ପାଇଁ ଗେମିଫାଇଡ୍ STEM ଶିକ୍ଷା ପ୍ଲାଟଫର୍ମ",
+    "notifications": "ବିଜ୍ଞପ୍ତି",
+    "newAchievement": "ନୂତନ ସଫଳତା!",
+    "unlockedBadge": "ଆପଣ ଏକ ନୂତନ ବ୍ୟାଜ୍ ଅନଲକ୍ କରିଛନ୍ତି!",
+    "gameCompleted": "ଖେଳ ସମାପ୍ତ",
+    "numberQuestCompleted": "ନମ୍ବର କ୍ୱେଷ୍ଟ ସଫଳତାର ସହିତ ସମାପ୍ତ!",
+    "levelUp": "ସ୍ତର ବୃଦ୍ଧି!",
+    "reachedLevel": "ଅଭିନନ୍ଦନ! ଆପଣ ସ୍ତର {{level}} ରେ ପହଞ୍ଚିଛନ୍ତି",
+    "points": "ପଏଣ୍ଟ",
+    "level": "ସ୍ତର",
+    "streak": "ଧାରା",
+    "profile": "ପ୍ରୋଫାଇଲ୍",
+    "settings": "ସେଟିଂସ୍",
+    "searchPlaceholder": "ଖେଳ, ବିଷୟ, ସଫଳତା ଖୋଜନ୍ତୁ..."
+  },
   "navigation": {
     "home": "ହୋମ୍",
     "dashboard": "ଡାସବୋର୍ଡ",

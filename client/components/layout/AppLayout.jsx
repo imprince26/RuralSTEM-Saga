@@ -3,8 +3,8 @@
 import { usePathname } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTheme } from '@/contexts/ThemeContext';
-import Navigation from '@/components/Navigation';
-import {Footer} from '@/components/Footer';
+import Header from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 const AppLayout = ({ children }) => {
   const pathname = usePathname();
@@ -42,13 +42,11 @@ const AppLayout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       {/* Header Navigation - Always visible except on no-layout pages */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <Navigation />
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="flex-1 w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {children}
         </div>
       </main>
