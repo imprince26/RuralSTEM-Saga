@@ -169,7 +169,6 @@ const Header = () => {
           <SheetTitle className="flex items-center space-x-3">
             <div className="relative">
               <GraduationCap className="h-7 w-7 text-primary" />
-              <div className="absolute -top-1 -right-1 h-3 w-3 bg-yellow-400 rounded-full animate-pulse" />
             </div>
             <div>
               <span className="text-primary font-bold text-lg">RuralSTEM</span>
@@ -230,7 +229,7 @@ const Header = () => {
                 <Link key={item.href} href={item.href}>
                   <Button 
                     variant={active ? "secondary" : "ghost"} 
-                    className={`w-full justify-start h-11 ${active ? 'bg-primary/10 text-primary border border-primary/20' : ''}`}
+                    className={`w-full justify-start ml-3 h-11 ${active ? 'bg-primary/10 text-primary border border-primary/20' : ''}`}
                   >
                     <Icon className="h-4 w-4 mr-3" />
                     {item.label}
@@ -279,7 +278,7 @@ const Header = () => {
                   <GraduationCap className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <div className="block">
+              <div className="hidden md:block">
                 <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-green-600 bg-clip-text text-transparent">
                   RuralSTEM
                 </h1>
@@ -289,7 +288,7 @@ const Header = () => {
           </div>
 
           {/* Center section: Desktop navigation (md and above) */}
-          <nav className="sm:hidden md:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
+          <nav className="hidden md:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => {
               const Icon = item.icon;
               const active = isActive(item.href);
@@ -314,7 +313,7 @@ const Header = () => {
 
           {/* Right section: User stats + Actions */}
           <div className="flex items-center space-x-2">
-            <UserStats />
+            {/* <UserStats /> */}
 
             {/* Search button */}
             <Button
