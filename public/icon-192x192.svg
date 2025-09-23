@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stemGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <dropShadow dx="2" dy="2" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="96" cy="96" r="90" fill="url(#bgGradient)" stroke="#ffffff" stroke-width="6" filter="url(#shadow)"/>
+  
+  <!-- Rural School Building -->
+  <g transform="translate(32, 75)">
+    <!-- Main Building -->
+    <rect x="10" y="35" width="48" height="36" fill="#8b5cf6" rx="3" filter="url(#shadow)"/>
+    <!-- Roof -->
+    <polygon points="4,35 34,12 64,35" fill="#6d28d9" filter="url(#shadow)"/>
+    <!-- Door -->
+    <rect x="26" y="52" width="10" height="19" fill="#ffffff" rx="1"/>
+    <!-- Windows -->
+    <rect x="42" y="45" width="10" height="10" fill="#ffffff" rx="1"/>
+    <rect x="14" y="45" width="10" height="10" fill="#ffffff" rx="1"/>
+    <!-- Door handle -->
+    <circle cx="33" cy="61" r="1" fill="#059669"/>
+    <!-- Chimney -->
+    <rect x="48" y="18" width="6" height="12" fill="#dc2626"/>
+  </g>
+  
+  <!-- STEM Science Atom -->
+  <g transform="translate(110, 55)">
+    <circle cx="18" cy="18" r="6" fill="none" stroke="url(#stemGradient)" stroke-width="4"/>
+    <circle cx="18" cy="18" r="14" fill="none" stroke="url(#stemGradient)" stroke-width="3" opacity="0.7"/>
+    <circle cx="18" cy="18" r="22" fill="none" stroke="url(#stemGradient)" stroke-width="2.5" opacity="0.5"/>
+    <circle cx="18" cy="18" r="2.5" fill="url(#stemGradient)"/>
+    <!-- Electron orbits -->
+    <circle cx="18" cy="6" r="2" fill="url(#stemGradient)"/>
+    <circle cx="30" cy="18" r="2" fill="url(#stemGradient)"/>
+    <circle cx="18" cy="30" r="2" fill="url(#stemGradient)"/>
+    <circle cx="6" cy="18" r="2" fill="url(#stemGradient)"/>
+  </g>
+  
+  <!-- Technology Gear -->
+  <g transform="translate(45, 125)">
+    <circle cx="12" cy="12" r="10" fill="none" stroke="url(#leafGradient)" stroke-width="4"/>
+    <circle cx="12" cy="12" r="4" fill="url(#leafGradient)"/>
+    <!-- Gear teeth -->
+    <rect x="11" y="0" width="2" height="5" fill="url(#leafGradient)"/>
+    <rect x="11" y="19" width="2" height="5" fill="url(#leafGradient)"/>
+    <rect x="0" y="11" width="5" height="2" fill="url(#leafGradient)"/>
+    <rect x="19" y="11" width="5" height="2" fill="url(#leafGradient)"/>
+    <!-- Diagonal teeth -->
+    <rect x="3" y="3" width="4" height="4" fill="url(#leafGradient)" transform="rotate(45 5 5)"/>
+    <rect x="17" y="3" width="4" height="4" fill="url(#leafGradient)" transform="rotate(-45 19 5)"/>
+    <rect x="3" y="17" width="4" height="4" fill="url(#leafGradient)" transform="rotate(-45 5 19)"/>
+    <rect x="17" y="17" width="4" height="4" fill="url(#leafGradient)" transform="rotate(45 19 19)"/>
+  </g>
+  
+  <!-- Math Symbols -->
+  <g transform="translate(130, 125)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#stemGradient)">π</text>
+    <text x="15" y="-5" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="url(#stemGradient)">x²</text>
+  </g>
+  
+  <!-- Growth Leaves -->
+  <g transform="translate(140, 85)">
+    <path d="M12,24 Q24,6 36,24 Q24,36 12,24 Z" fill="url(#leafGradient)" filter="url(#shadow)"/>
+    <line x1="12" y1="24" x2="24" y2="36" stroke="url(#leafGradient)" stroke-width="3"/>
+    <path d="M18,30 Q26,18 34,30 Q26,38 18,30 Z" fill="#34d399" opacity="0.8"/>
+    <!-- Leaf veins -->
+    <line x1="20" y1="26" x2="28" y2="32" stroke="#059669" stroke-width="1" opacity="0.6"/>
+    <line x1="22" y1="22" x2="30" y2="28" stroke="#059669" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Game Controller -->
+  <g transform="translate(65, 155)">
+    <rect x="0" y="0" width="24" height="14" fill="#8b5cf6" rx="6" filter="url(#shadow)"/>
+    <circle cx="5" cy="7" r="2" fill="#ffffff"/>
+    <circle cx="19" cy="7" r="2" fill="#ffffff"/>
+    <rect x="8" y="3" width="8" height="8" fill="#6d28d9" rx="2"/>
+    <!-- D-pad -->
+    <rect x="10" y="5" width="4" height="1" fill="#ffffff"/>
+    <rect x="11.5" y="3.5" width="1" height="4" fill="#ffffff"/>
+  </g>
+  
+  <!-- Engineering Bridge -->
+  <g transform="translate(100, 150)">
+    <path d="M0,12 Q12,0 24,12" fill="none" stroke="url(#stemGradient)" stroke-width="3"/>
+    <line x1="0" y1="12" x2="6" y2="6" stroke="url(#stemGradient)" stroke-width="2"/>
+    <line x1="6" y1="12" x2="12" y2="4" stroke="url(#stemGradient)" stroke-width="2"/>
+    <line x1="12" y1="12" x2="18" y2="4" stroke="url(#stemGradient)" stroke-width="2"/>
+    <line x1="18" y1="12" x2="24" y2="6" stroke="url(#stemGradient)" stroke-width="2"/>
+  </g>
+</svg>

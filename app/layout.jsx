@@ -20,6 +20,26 @@ export const metadata = {
   title: 'RuralSTEM Saga - Gamified Learning Platform',
   description: 'A gamified digital platform to enhance STEM learning outcomes for rural students in Odisha',
   keywords: 'STEM education, rural learning, gamification, Odisha, educational technology',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/icon-192x192.svg', sizes: '192x192', type: 'image/svg+xml' },
+      { url: '/icon-512x512.svg', sizes: '512x512', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.svg', sizes: '180x180', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+  },
+  manifest: '/manifest.json',
+  themeColor: '#10b981',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'RuralSTEM Saga',
+  },
 };
 
 export default function RootLayout({ children }) {

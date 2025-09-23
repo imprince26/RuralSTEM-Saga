@@ -4,20 +4,38 @@
   "description": "A gamified digital platform to enhance STEM learning outcomes for rural students with interactive games, multilingual content, and offline access.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#22C55E",
-  "theme_color": "#22C55E",
+  "background_color": "#10b981",
+  "theme_color": "#10b981",
   "icons": [
     {
-      "src": "/icon-192x192.png",
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192x192.svg",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512x512.png", 
+      "src": "/icon-512x512.svg", 
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32 16x16",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "categories": ["education", "games", "productivity"],
