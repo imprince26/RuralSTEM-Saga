@@ -11,6 +11,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
+  TooltipProvider,
 } from "@/components/ui/tooltip"
 
 const languages = [
@@ -28,39 +29,52 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+    <TooltipProvider>
+      <DropdownMenu>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button variant="outline" size="sm" className="gap-2">
-              <Languages className="h-4 w-4" />
-              <span className="hidden sm:inline">
-                {languages.find(lang => lang.code === i18n.language)?.nativeName || 'English'}
-              </span>
-            </Button>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="gap-2">
+                <Languages className="h-4 w-4" />
+                <span className="hidden sm:inline">
+                  {languages.find(lang => lang.code === i18n.language)?.nativeName || 'English'}
+                </span>
+              </Button>
+            </DropdownMenuTrigger>
           </TooltipTrigger>
-          <TooltipContent side="bottom">
+          <TooltipContent 
+            side="top" 
+            align="center"
+            sideOffset={5}
+            className="z-50"
+            avoidCollisions={true}
+          >
             Change Language
           </TooltipContent>
         </Tooltip>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {languages.map((language) => (
-          <DropdownMenuItem
-            key={language.code}
-            onClick={() => changeLanguage(language.code)}
-            className="flex items-center justify-between cursor-pointer"
-          >
-            <div className="flex flex-col">
-              <span className="font-medium">{language.nativeName}</span>
-              <span className="text-xs text-muted-foreground">{language.name}</span>
-            </div>
-            {i18n.language === language.code && (
-              <Check className="h-4 w-4 text-primary" />
-            )}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+        <DropdownMenuContent 
+          align="end" 
+          sideOffset={8}
+          className="z-50"
+          avoidCollisions={true}
+        >
+          {languages.map((language) => (
+            <DropdownMenuItem
+              key={language.code}
+              onClick={() => changeLanguage(language.code)}
+              className="flex items-center justify-between cursor-pointer"
+            >
+              <div className="flex flex-col">
+                <span className="font-medium">{language.nativeName}</span>
+                <span className="text-xs text-muted-foreground">{language.name}</span>
+              </div>
+              {i18n.language === language.code && (
+                <Check className="h-4 w-4 text-primary" />
+              )}
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </TooltipProvider>
   );
 }

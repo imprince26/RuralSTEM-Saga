@@ -328,9 +328,9 @@ const Header = () => {
             {/* Notifications dropdown */}
             {user && (
               <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="sm" className="relative h-9 w-9">
                         <Bell className="h-4 w-4" />
                         {notifications.length > 0 && (
@@ -339,13 +339,13 @@ const Header = () => {
                           </Badge>
                         )}
                       </Button>
-                    </TooltipTrigger>
-                    <TooltipContent side="bottom" className="text-xs">
-                      <p>Notifications</p>
-                    </TooltipContent>
-                  </Tooltip>
+                    </DropdownMenuTrigger>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="text-xs">
+                    <p>Notifications</p>
+                  </TooltipContent>
+                </Tooltip>
 
-                </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-80">
                   <DropdownMenuLabel>Notifications</DropdownMenuLabel>
                   <DropdownMenuSeparator />
