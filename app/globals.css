@@ -153,6 +153,43 @@
     font-family: 'Poppins', system-ui, sans-serif;
     font-weight: 600;
   }
+
+  ::selection {
+    background: color-mix(in srgb, var(--primary) 25%, transparent 75%);
+    color: var(--primary-foreground);
+    text-shadow: none;
+  }
+
+  ::-moz-selection {
+    background: color-mix(in srgb, var(--primary) 25%, transparent 75%);
+    color: var(--primary-foreground);
+    text-shadow: none;
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary/70 backdrop-blur-sm;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-primary/80 to-primary/60 rounded-sm transition-all duration-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gradient-to-b from-primary/90 to-primary/70;
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
 }
 
 /* Custom Animations and Effects */

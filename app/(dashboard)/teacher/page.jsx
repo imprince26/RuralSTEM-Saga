@@ -10,9 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
   Users,
-  BookOpen,
   TrendingUp,
-  Calendar,
   Clock,
   Award,
   AlertCircle,
@@ -23,7 +21,6 @@ import {
   LineChart,
   Download,
   Filter,
-  Search,
   Bell
 } from 'lucide-react';
 import { 

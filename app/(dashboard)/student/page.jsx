@@ -7,17 +7,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { 
-  BookOpen,
-  Trophy,
-  Star,
-  Calendar,
+import {
   Clock,
   Target,
   PlayCircle,
-  Award,
   TrendingUp,
-  Flame,
   Users,
   ChevronRight,
   Calculator,
@@ -25,6 +19,13 @@ import {
   Laptop,
   Hammer
 } from 'lucide-react';
+import {
+  FaAward as Award,
+  FaStar as Star,
+  FaFire as Flame,
+  FaTrophy as Trophy,
+  FaCalendar as Calendar,
+} from "react-icons/fa";
 import { useAuthStore } from '@/stores/useAuthStore';
 import { useGameStore } from '@/stores/useGameStore';
 import Link from 'next/link';
@@ -44,7 +45,7 @@ export default function StudentDashboard() {
       router.push('/login');
       return;
     }
-    
+
     // Simulate loading user data
     setCurrentStreak(streak);
   }, [isAuthenticated, streak, router]);
@@ -141,7 +142,7 @@ export default function StudentDashboard() {
   const weeklyProgress = Math.round((gamesPlayedThisWeek / weeklyGoal) * 100);
 
   return (
-    <div className="min-h-screen bg-background">      
+    <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Welcome Header */}
         <div className="mb-8">
