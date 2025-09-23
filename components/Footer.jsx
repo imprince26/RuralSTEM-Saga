@@ -3,14 +3,14 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { 
+import {
   // BookOpen, 
   Mail,
   Phone,
   MapPin,
   Globe
 } from 'lucide-react';
-import { FaGithub as Github, FaXTwitter as Twitter, FaHeart as Heart, FaBookOpen as BookOpen  } from "react-icons/fa6";
+import { FaGithub as Github, FaXTwitter as Twitter, FaHeart as Heart, FaBookOpen as BookOpen } from "react-icons/fa6";
 
 export function Footer() {
   const footerLinks = {
@@ -37,17 +37,17 @@ export function Footer() {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/ruralstem-saga',
+      href: 'https://github.com/',
       icon: Github
     },
     {
       name: 'Twitter',
-      href: 'https://twitter.com/ruralstemsaga',
+      href: 'https://twitter.com/',
       icon: Twitter
     },
     {
       name: 'Email',
-      href: 'mailto:contact@ruralstemsaga.org',
+      href: 'mailto:contact@example.org',
       icon: Mail
     }
   ];
@@ -71,7 +71,7 @@ export function Footer() {
               <p className="text-muted-foreground text-sm mb-6 max-w-md">
                 Empowering rural students with gamified STEM education through interactive learning experiences.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-2 text-sm">
                 <div className="flex items-center text-muted-foreground">
@@ -97,7 +97,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.platform.map((link) => (
                   <li key={link.key}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -116,7 +116,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.key}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -135,7 +135,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.key}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -144,7 +144,7 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-              
+
               {/* Language Notice */}
               <div className="mt-6 p-3 bg-accent rounded-lg">
                 <div className="flex items-center text-sm">
@@ -163,7 +163,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm text-muted-foreground">
               <span>
-                © 2024 RuralSTEM Saga. All rights reserved.
+                © 2025 RuralSTEM Saga. All rights reserved.
               </span>
               <span className="hidden sm:block">|</span>
               <div className="flex items-center">
@@ -193,7 +193,7 @@ export function Footer() {
           <div className="mt-6 pt-6 border-t">
             <div className="text-center">
               <p className="text-sm text-muted-foreground mb-2">
-                A project under Smart India Hackathon 2024
+                A project under Smart India Hackathon 2025
               </p>
               <p className="text-xs text-muted-foreground">
                 Electronics & IT Department, Government of Odisha
