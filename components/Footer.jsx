@@ -4,15 +4,13 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { 
-  BookOpen, 
-  Heart, 
-  Github, 
-  Twitter, 
+  // BookOpen, 
   Mail,
   Phone,
   MapPin,
   Globe
 } from 'lucide-react';
+import { FaGithub as Github, FaXTwitter as Twitter, FaHeart as Heart, FaBookOpen as BookOpen  } from "react-icons/fa6";
 
 export function Footer() {
   const footerLinks = {
@@ -82,7 +80,7 @@ export function Footer() {
                 </div>
                 <div className="flex items-center text-muted-foreground">
                   <Mail className="h-4 w-4 mr-2" />
-                  <span>contact@ruralstemsaga.org</span>
+                  <span>contact@example.org</span>
                 </div>
                 <div className="flex items-center text-muted-foreground">
                   <Phone className="h-4 w-4 mr-2" />

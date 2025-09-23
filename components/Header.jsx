@@ -4,31 +4,18 @@ import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import { 
-  Menu, 
-  X, 
-  Home, 
-  Gamepad2, 
-  Users, 
-  Trophy, 
-  BarChart3,
-  User,
+import {
+  TextAlignStart as Menu,
+  X,
   Settings,
   LogOut,
-  Bell,
-  Search,
-  ChevronDown,
   Star,
   Zap,
   Target,
-  Award,
-  BookOpen,
-  Globe,
-  TrendingUp,
   Shield,
-  GraduationCap
 } from 'lucide-react';
-
+import { FaBookOpen as BookOpen, FaHome as Home, FaGamepad as Gamepad, FaTrophy as Trophy, FaChartBar as BarChart, FaMedal as Award, FaSearch as Search, FaBell as Bell } from "react-icons/fa";
+import { FaArrowTrendUp as TrendingUp } from "react-icons/fa6";
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
@@ -93,7 +80,7 @@ const Header = () => {
   const getNavItems = () => {
     const baseItems = [
       { href: '/', label: 'Home', icon: Home },
-      { href: '/games', label: 'Games', icon: Gamepad2 },
+      { href: '/games', label: 'Games', icon: Gamepad },
       { href: '/leaderboard', label: 'Leaderboard', icon: Trophy },
     ];
 
@@ -102,19 +89,19 @@ const Header = () => {
     const roleItems = {
       student: [
         ...baseItems,
-        { href: '/student', label: 'Dashboard', icon: BarChart3 },
+        { href: '/student', label: 'Dashboard', icon: BarChart },
         { href: '/progress', label: 'Progress', icon: TrendingUp },
         { href: '/achievements', label: 'Achievements', icon: Award },
       ],
       teacher: [
         ...baseItems,
-        { href: '/teacher', label: 'Dashboard', icon: BarChart3 },
+        { href: '/teacher', label: 'Dashboard', icon: BarChart },
         { href: '/progress', label: 'Analytics', icon: TrendingUp },
       ],
       admin: [
         ...baseItems,
         { href: '/admin', label: 'Admin', icon: Shield },
-        { href: '/teacher', label: 'Analytics', icon: BarChart3 },
+        { href: '/teacher', label: 'Analytics', icon: BarChart },
       ]
     };
 
@@ -168,7 +155,7 @@ const Header = () => {
         <SheetHeader className="text-left">
           <SheetTitle className="flex items-center space-x-3">
             <div className="relative">
-              <GraduationCap className="h-7 w-7 text-primary" />
+              <BookOpen className="h-7 w-7 text-primary" />
             </div>
             <div>
               <span className="text-primary font-bold text-lg">RuralSTEM</span>
@@ -179,8 +166,8 @@ const Header = () => {
             Gamified learning platform for rural STEM education
           </SheetDescription>
         </SheetHeader>
-        
-        <div className="flex flex-col space-y-4 mt-6">
+
+        <div className="flex flex-col mx-3 space-y-4 mt-6">
           {/* User info in mobile */}
           {user && (
             <div className="flex items-center space-x-3 p-4 bg-accent/50 rounded-lg border">
@@ -227,9 +214,9 @@ const Header = () => {
               const active = isActive(item.href);
               return (
                 <Link key={item.href} href={item.href}>
-                  <Button 
-                    variant={active ? "secondary" : "ghost"} 
-                    className={`w-full justify-start ml-3 h-11 ${active ? 'bg-primary/10 text-primary border border-primary/20' : ''}`}
+                  <Button
+                    variant={active ? "secondary" : "ghost"}
+                    className={`w-full justify-start  h-11 ${active ? 'bg-primary/10 text-primary border border-primary/20' : ''}`}
                   >
                     <Icon className="h-4 w-4 mr-3" />
                     {item.label}
@@ -266,16 +253,16 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          
+
           {/* Left section: Mobile menu + Logo */}
           <div className="flex items-center space-x-4">
             <MobileNav />
-            
+
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-9 h-9 bg-gradient-to-br from-primary to-green-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                  <GraduationCap className="h-5 w-5 text-white" />
+                  <BookOpen className="h-5 w-5 text-white" />
                 </div>
               </div>
               <div className="hidden md:block">
@@ -294,14 +281,13 @@ const Header = () => {
               const active = isActive(item.href);
               return (
                 <Link key={item.href} href={item.href}>
-                  <Button 
-                    variant={active ? "secondary" : "ghost"} 
+                  <Button
+                    variant={active ? "secondary" : "ghost"}
                     size="sm"
-                    className={`flex items-center space-x-2 px-3 py-2 h-9 ${
-                      active 
-                        ? 'bg-primary/10 text-primary border border-primary/20 shadow-sm' 
+                    className={`flex items-center space-x-2 px-3 py-2 h-9 ${active
+                        ? 'bg-primary/10 text-primary border border-primary/20 shadow-sm'
                         : 'text-muted-foreground hover:text-foreground hover:bg-accent'
-                    }`}
+                      }`}
                   >
                     <Icon className="h-4 w-4" />
                     <span className="md:hidden xl:inline">{item.label}</span>
@@ -386,14 +372,14 @@ const Header = () => {
                     </div>
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  
+
                   <DropdownMenuItem asChild>
                     <Link href={`/${user.role}`} className="cursor-pointer">
-                      <BarChart3 className="mr-2 h-4 w-4" />
+                      <BarChart className="mr-2 h-4 w-4" />
                       <span>Dashboard</span>
                     </Link>
                   </DropdownMenuItem>
-                  
+
                   <DropdownMenuItem asChild>
                     <Link href="/progress" className="cursor-pointer">
                       <TrendingUp className="mr-2 h-4 w-4" />
@@ -407,17 +393,17 @@ const Header = () => {
                       <span>Achievements</span>
                     </Link>
                   </DropdownMenuItem>
-                  
+
                   <DropdownMenuSeparator />
-                  
+
                   <DropdownMenuItem className="cursor-pointer">
                     <Settings className="mr-2 h-4 w-4" />
                     <span>Settings</span>
                   </DropdownMenuItem>
-                  
+
                   <DropdownMenuSeparator />
-                  
-                  <DropdownMenuItem 
+
+                  <DropdownMenuItem
                     onClick={handleLogout}
                     className="cursor-pointer text-red-600 focus:text-red-600 focus:bg-red-50"
                   >
