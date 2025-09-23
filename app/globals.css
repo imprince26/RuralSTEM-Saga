@@ -47,29 +47,39 @@
 :root {
   --radius: 0.625rem;
   /* Odisha-inspired Green Theme */
-  --background: oklch(0.97 0.01 120);  /* Light green-tinted background */
-  --foreground: oklch(0.25 0.01 120);  /* Dark text */
-  --card: oklch(1 0 0);  /* Pure white cards */
+  --background: oklch(0.97 0.01 120);
+  /* Light green-tinted background */
+  --foreground: oklch(0.25 0.01 120);
+  /* Dark text */
+  --card: oklch(1 0 0);
+  /* Pure white cards */
   --card-foreground: oklch(0.25 0.01 120);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.25 0.01 120);
-  --primary: oklch(0.65 0.15 145);  /* Nature Green #22C55E */
+  --primary: oklch(0.65 0.15 145);
+  /* Nature Green #22C55E */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.65 0.15 225);  /* Sky Blue #3B82F6 */
+  --secondary: oklch(85.492% 0.05601 157.268);
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.98 0.005 120);
   --muted-foreground: oklch(0.45 0.01 120);
-  --accent: oklch(0.7 0.15 70);  /* Golden Yellow #F59E0B */
+  --accent: oklch(89.771% 0.007 88.617);
   --accent-foreground: oklch(0.25 0.01 120);
-  --destructive: oklch(0.6 0.2 20);  /* Red */
+  --destructive: oklch(0.6 0.2 20);
+  /* Red */
   --border: oklch(0.92 0.005 120);
   --input: oklch(0.92 0.005 120);
   --ring: oklch(0.65 0.15 145);
-  --chart-1: oklch(0.65 0.15 145);  /* Green */
-  --chart-2: oklch(0.65 0.15 225);  /* Blue */
-  --chart-3: oklch(0.7 0.15 70);   /* Yellow */
-  --chart-4: oklch(0.6 0.15 315);  /* Purple */
-  --chart-5: oklch(0.6 0.15 15);   /* Orange */
+  --chart-1: oklch(0.65 0.15 145);
+  /* Green */
+  --chart-2: oklch(0.65 0.15 225);
+  /* Blue */
+  --chart-3: oklch(0.7 0.15 70);
+  /* Yellow */
+  --chart-4: oklch(0.6 0.15 315);
+  /* Purple */
+  --chart-5: oklch(0.6 0.15 15);
+  /* Orange */
   --sidebar: oklch(0.98 0.005 120);
   --sidebar-foreground: oklch(0.35 0.01 120);
   --sidebar-primary: oklch(0.65 0.15 145);
@@ -81,29 +91,39 @@
 }
 
 .dark {
-  --background: oklch(0.12 0.01 240);  /* Dark blue-gray */
-  --foreground: oklch(0.95 0.005 120);  /* Light text */
-  --card: oklch(0.15 0.01 240);  /* Dark cards */
+  --background: oklch(0.12 0.01 240);
+  /* Dark blue-gray */
+  --foreground: oklch(0.95 0.005 120);
+  /* Light text */
+  --card: oklch(0.15 0.01 240);
+  /* Dark cards */
   --card-foreground: oklch(0.95 0.005 120);
   --popover: oklch(0.15 0.01 240);
   --popover-foreground: oklch(0.95 0.005 120);
-  --primary: oklch(0.65 0.15 145);  /* Keep green */
+  --primary: oklch(0.65 0.15 145);
+  /* Keep green */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.65 0.15 225);  /* Keep blue */
+  --secondary: oklch(41.114% 0.08256 150.307);
+  /* Keep blue */
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.18 0.01 240);
   --muted-foreground: oklch(0.65 0.01 240);
-  --accent: oklch(69.283% 0.22109 143.003);  /* Keep yellow */
-  --accent-foreground: oklch(0.12 0.01 240);
+  --accent: oklch(55.008% 0.15366 143.15);
+  --accent-foreground: oklch(89.511% 0.02106 248.178);
   --destructive: oklch(0.6 0.2 20);
   --border: oklch(0.2 0.01 240);
   --input: oklch(0.2 0.01 240);
   --ring: oklch(0.65 0.15 145);
-  --chart-1: oklch(0.65 0.15 145);  /* Green */
-  --chart-2: oklch(0.65 0.15 225);  /* Blue */
-  --chart-3: oklch(0.7 0.15 70);   /* Yellow */
-  --chart-4: oklch(0.6 0.15 315);  /* Purple */
-  --chart-5: oklch(0.6 0.15 15);   /* Orange */
+  --chart-1: oklch(0.65 0.15 145);
+  /* Green */
+  --chart-2: oklch(0.65 0.15 225);
+  /* Blue */
+  --chart-3: oklch(0.7 0.15 70);
+  /* Yellow */
+  --chart-4: oklch(0.6 0.15 315);
+  /* Purple */
+  --chart-5: oklch(0.6 0.15 15);
+  /* Orange */
   --sidebar: oklch(0.1 0.01 240);
   --sidebar-foreground: oklch(0.85 0.005 120);
   --sidebar-primary: oklch(0.65 0.15 145);
@@ -118,12 +138,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Poppins', system-ui, sans-serif;
     font-weight: 600;
   }
@@ -157,10 +183,9 @@
 }
 
 .game-card {
-  background: linear-gradient(135deg, 
-    color-mix(in srgb, var(--primary) 5%, var(--card)) 0%, 
-    color-mix(in srgb, var(--secondary) 5%, var(--card)) 100%
-  );
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--primary) 5%, var(--card)) 0%,
+      color-mix(in srgb, var(--secondary) 5%, var(--card)) 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
@@ -179,39 +204,87 @@
 }
 
 .progress-bar {
-  background: linear-gradient(90deg, 
-    var(--primary) 0%, 
-    var(--secondary) 50%, 
-    var(--accent) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--primary) 0%,
+      var(--secondary) 50%,
+      var(--accent) 100%);
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse-soft {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-  20%, 40%, 60%, 80% { transform: translateX(5px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
 }
 
 @keyframes bounce-in {
-  0% { transform: scale(0.3) translateY(-50px); opacity: 0; }
-  50% { transform: scale(1.1) translateY(-10px); }
-  70% { transform: scale(0.9) translateY(0); }
-  100% { transform: scale(1) translateY(0); opacity: 1; }
+  0% {
+    transform: scale(0.3) translateY(-50px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1) translateY(-10px);
+  }
+
+  70% {
+    transform: scale(0.9) translateY(0);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 40%, transparent); }
-  to { box-shadow: 0 0 30px color-mix(in srgb, var(--accent) 60%, transparent); }
+  from {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+
+  to {
+    box-shadow: 0 0 30px color-mix(in srgb, var(--accent) 60%, transparent);
+  }
 }
 
 /* Eco Mode Styles */

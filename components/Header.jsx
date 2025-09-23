@@ -20,6 +20,11 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -42,7 +47,6 @@ import { useAuthStore } from '@/stores/useAuthStore';
 import { useGameStore } from '@/stores/useGameStore';
 
 const Header = () => {
-  const { t } = useTranslation();
   const router = useRouter();
   const pathname = usePathname();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -285,8 +289,8 @@ const Header = () => {
                     variant={active ? "secondary" : "ghost"}
                     size="sm"
                     className={`flex items-center space-x-2 px-3 py-2 h-9 ${active
-                        ? 'bg-primary/10 text-primary border border-primary/20 shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                      ? 'bg-primary/10 text-primary border border-primary/20 shadow-sm'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                       }`}
                   >
                     <Icon className="h-4 w-4" />
@@ -302,28 +306,45 @@ const Header = () => {
             {/* <UserStats /> */}
 
             {/* Search button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="md:hidden xl:flex h-9 w-9"
-              title="Search games and topics"
-            >
-              <Search className="h-4 w-4" />
-            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setIsSearchOpen(!isSearchOpen)}
+                  className="md:hidden xl:flex h-9 w-9"
+                  title="Search games and topics"
+                >
+                  <Search className="h-4 w-4" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent side="bottom" className="text-xs">
+                <p>Search</p>
+              </TooltipContent>
+            </Tooltip>
+
+
 
             {/* Notifications dropdown */}
             {user && (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="relative h-9 w-9">
-                    <Bell className="h-4 w-4" />
-                    {notifications.length > 0 && (
-                      <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 flex items-center justify-center text-xs bg-red-500 hover:bg-red-500">
-                        {notifications.length}
-                      </Badge>
-                    )}
-                  </Button>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="ghost" size="sm" className="relative h-9 w-9">
+                        <Bell className="h-4 w-4" />
+                        {notifications.length > 0 && (
+                          <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 flex items-center justify-center text-xs bg-red-500 hover:bg-red-500">
+                            {notifications.length}
+                          </Badge>
+                        )}
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="text-xs">
+                      <p>Notifications</p>
+                    </TooltipContent>
+                  </Tooltip>
+
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-80">
                   <DropdownMenuLabel>Notifications</DropdownMenuLabel>
@@ -353,12 +374,19 @@ const Header = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="relative h-9 w-9 rounded-full">
-                    <Avatar className="h-8 w-8 border-2 border-primary/20">
-                      <AvatarImage src={user.avatar} alt={user.name} />
-                      <AvatarFallback className="bg-primary/10 text-primary font-semibold text-sm">
-                        {user.name?.charAt(0)?.toUpperCase() || 'U'}
-                      </AvatarFallback>
-                    </Avatar>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Avatar className="h-8 w-8 border-2 border-primary/20">
+                          <AvatarImage src={user.avatar} alt={user.name} />
+                          <AvatarFallback className="bg-primary/10 text-primary font-semibold text-sm">
+                            {user.name?.charAt(0)?.toUpperCase() || 'U'}
+                          </AvatarFallback>
+                        </Avatar>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom" className="text-xs">
+                        <p>{user.name}</p>
+                      </TooltipContent>
+                    </Tooltip>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56" align="end" forceMount>
