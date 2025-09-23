@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/stores/useAuthStore';
+import { useLoading } from '@/contexts/LoadingContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { ButtonLoader } from '@/components/ui/loader';
 import { toast } from 'react-hot-toast';
 import { Eye, EyeOff, Leaf, BookOpen, Users, Shield } from 'lucide-react';
 import Link from 'next/link';
@@ -23,6 +25,7 @@ export default function LoginPage() {
   const [errors, setErrors] = useState({});
   
   const { login } = useAuthStore();
+  const { startLoading, stopLoading } = useLoading();
   const router = useRouter();
 
   const validateForm = () => {
@@ -88,9 +91,12 @@ export default function LoginPage() {
     }
     
     setIsLoading(true);
+    startLoading('Authenticating...', 'dots', true);
 
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Simulate API call delay with progress
+    for (let i = 0; i <= 100; i += 20) {
+      await new Promise(resolve => setTimeout(resolve, 200));
+    }
 
     try {
       // Mock authentication - In real app, this would be an API call
@@ -112,15 +118,18 @@ export default function LoginPage() {
         login(userData);
         toast.success(`Welcome back! Logged in as ${formData.role}`);
         
-        // Redirect based on role
+        // Redirect based on role with loading message
         switch (formData.role) {
           case 'admin':
+            startLoading('Redirecting to Admin Dashboard...', 'default');
             router.push('/admin');
             break;
           case 'teacher':
+            startLoading('Redirecting to Teacher Dashboard...', 'default');
             router.push('/teacher');
             break;
           default:
+            startLoading('Redirecting to Student Dashboard...', 'default');
             router.push('/student');
         }
       } else {
@@ -128,6 +137,7 @@ export default function LoginPage() {
       }
     } catch (error) {
       toast.error('Login failed. Please try again.');
+      stopLoading();
     } finally {
       setIsLoading(false);
     }
@@ -277,7 +287,14 @@ export default function LoginPage() {
               </div>
 
               <Button type="submit" className="w-full" disabled={isLoading}>
-                {isLoading ? 'Signing in...' : 'Sign In'}
+                {isLoading ? (
+                  <div className="flex items-center gap-2">
+                    <ButtonLoader />
+                    Signing in...
+                  </div>
+                ) : (
+                  'Sign In'
+                )}
               </Button>
             </form>
 

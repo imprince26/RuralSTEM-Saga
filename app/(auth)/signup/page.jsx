@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/stores/useAuthStore';
+import { useLoading } from '@/contexts/LoadingContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { ButtonLoader } from '@/components/ui/loader';
 import { toast } from 'react-hot-toast';
 import { Eye, EyeOff, Leaf, BookOpen, Users, Shield } from 'lucide-react';
 import Link from 'next/link';
@@ -28,6 +30,7 @@ export default function SignupPage() {
   const [errors, setErrors] = useState({});
   
   const { login } = useAuthStore();
+  const { startLoading, stopLoading } = useLoading();
   const router = useRouter();
 
   const validateForm = () => {
@@ -101,26 +104,32 @@ export default function SignupPage() {
     }
     
     setIsLoading(true);
+    startLoading('Creating your account...', 'plant', true);
 
     try {
       // Validation
       if (!formData.name || !formData.email || !formData.password) {
         toast.error('Please fill in all required fields');
+        stopLoading();
         return;
       }
 
       if (formData.password !== formData.confirmPassword) {
         toast.error('Passwords do not match');
+        stopLoading();
         return;
       }
 
       if (formData.password.length < 6) {
         toast.error('Password must be at least 6 characters long');
+        stopLoading();
         return;
       }
 
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Simulate API call delay with progress
+      for (let i = 0; i <= 100; i += 25) {
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
 
       // Mock registration - In real app, this would be an API call
       const userData = {
@@ -142,19 +151,23 @@ export default function SignupPage() {
       login(userData);
       toast.success(`Account created successfully! Welcome ${formData.name}`);
       
-      // Redirect based on role
+      // Redirect based on role with loading message
       switch (formData.role) {
         case 'admin':
+          startLoading('Setting up Admin Dashboard...', 'default');
           router.push('/admin');
           break;
         case 'teacher':
+          startLoading('Setting up Teacher Dashboard...', 'default');
           router.push('/teacher');
           break;
         default:
+          startLoading('Setting up Student Dashboard...', 'default');
           router.push('/student');
       }
     } catch (error) {
       toast.error('Registration failed. Please try again.');
+      stopLoading();
     } finally {
       setIsLoading(false);
     }
@@ -325,7 +338,14 @@ export default function SignupPage() {
               </div>
 
               <Button type="submit" className="w-full" disabled={isLoading}>
-                {isLoading ? 'Creating Account...' : 'Create Account'}
+                {isLoading ? (
+                  <div className="flex items-center gap-2">
+                    <ButtonLoader />
+                    Creating Account...
+                  </div>
+                ) : (
+                  'Create Account'
+                )}
               </Button>
             </form>
 
