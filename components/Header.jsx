@@ -289,7 +289,7 @@ const Header = () => {
           </div>
 
           {/* Center section: Desktop navigation (md and above) */}
-          <nav className="hidden md:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
+          <nav className="sm:hidden md:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => {
               const Icon = item.icon;
               const active = isActive(item.href);
@@ -305,7 +305,7 @@ const Header = () => {
                     }`}
                   >
                     <Icon className="h-4 w-4" />
-                    <span className="hidden lg:inline">{item.label}</span>
+                    <span className="md:hidden xl:inline">{item.label}</span>
                   </Button>
                 </Link>
               );
@@ -321,7 +321,7 @@ const Header = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="hidden lg:flex h-9 w-9"
+              className="md:hidden xl:flex h-9 w-9"
               title="Search games and topics"
             >
               <Search className="h-4 w-4" />
