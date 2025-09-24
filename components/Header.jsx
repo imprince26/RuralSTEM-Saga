@@ -84,6 +84,7 @@ const Header = () => {
   const getNavItems = () => {
     const baseItems = [
       { href: '/', label: 'Home', icon: Home },
+      { href: '/learning', label: 'Learning', icon: BookOpen },
       { href: '/games', label: 'Games', icon: Gamepad },
       { href: '/leaderboard', label: 'Leaderboard', icon: Trophy },
     ];
