@@ -11,7 +11,8 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ButtonLoader } from '@/components/ui/loader';
 import { toast } from 'react-hot-toast';
-import { Eye, EyeOff, Leaf, BookOpen, Users, Shield } from 'lucide-react';
+import { Eye, EyeOff, Leaf, Users, Shield } from 'lucide-react';
+import { FaBookOpen as BookOpen } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function SignupPage() {
@@ -28,7 +29,7 @@ export default function SignupPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
-  
+
   const { login } = useAuthStore();
   const { startLoading, stopLoading } = useLoading();
   const router = useRouter();
@@ -78,7 +79,7 @@ export default function SignupPage() {
       ...prev,
       [name]: value
     }));
-    
+
     // Clear error for this field when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
@@ -97,12 +98,12 @@ export default function SignupPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       toast.error('Please fix the errors below');
       return;
     }
-    
+
     setIsLoading(true);
     startLoading('Creating your account...', 'plant', true);
 
@@ -150,7 +151,7 @@ export default function SignupPage() {
 
       login(userData);
       toast.success(`Account created successfully! Welcome ${formData.name}`);
-      
+
       // Redirect based on role with loading message
       switch (formData.role) {
         case 'admin':
@@ -180,7 +181,7 @@ export default function SignupPage() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
             <div className="bg-primary/10 p-3 rounded-full">
-              <Leaf className="h-8 w-8 text-primary" />
+              <BookOpen className="h-8 w-8 text-primary" />
             </div>
           </div>
           <h1 className="text-3xl font-bold text-foreground mb-2">Join RuralSTEM Saga</h1>
@@ -221,7 +222,7 @@ export default function SignupPage() {
                   required
                 />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="password">Password *</Label>
                 <div className="relative">
@@ -360,7 +361,7 @@ export default function SignupPage() {
 
         <div className="mt-8 text-center text-xs text-muted-foreground">
           <p>By creating an account, you agree to our Terms of Service and Privacy Policy</p>
-          <p className="mt-2">Smart India Hackathon 2024 | Problem Statement 25048</p>
+          <p className="mt-2">Smart India Hackathon 2025 | Problem Statement 25048</p>
         </div>
       </div>
     </div>

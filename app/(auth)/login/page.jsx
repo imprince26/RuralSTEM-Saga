@@ -11,7 +11,8 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ButtonLoader } from '@/components/ui/loader';
 import { toast } from 'react-hot-toast';
-import { Eye, EyeOff, Leaf, BookOpen, Users, Shield } from 'lucide-react';
+import { Eye, EyeOff, Leaf, Users, Shield } from 'lucide-react';
+import { FaBookOpen as BookOpen } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function LoginPage() {
@@ -189,7 +190,7 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
             <div className="bg-primary/10 p-3 rounded-full">
-              <Leaf className="h-8 w-8 text-primary" />
+              <BookOpen className="h-8 w-8 text-primary" />
             </div>
           </div>
           <h1 className="text-3xl font-bold text-foreground mb-2">RuralSTEM Saga</h1>
@@ -344,7 +345,7 @@ export default function LoginPage() {
         </Card>
 
         <div className="mt-8 text-center text-xs text-muted-foreground">
-          <p>Smart India Hackathon 2024 | Problem Statement 25048</p>
+          <p>Smart India Hackathon 2025 | Problem Statement 25048</p>
           <p className="mt-1">Government of Odisha - Electronics & IT Department</p>
         </div>
       </div>
